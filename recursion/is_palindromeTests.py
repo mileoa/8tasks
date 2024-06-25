@@ -7,16 +7,16 @@ class IsPalindromeTests(unittest.TestCase):
 
     def test_regression(self):
 
-        self.assertEqual(is_palindrome("aba", 3), True)
-        self.assertEqual(is_palindrome("abab", 4), False)
-        self.assertEqual(is_palindrome("abba", 4), True)
-        self.assertEqual(is_palindrome("cabxbac", 7), True)
-        self.assertEqual(is_palindrome("cabxbсc", 7), False)
+        self.assertEqual(is_palindrome("aba"), True)
+        self.assertEqual(is_palindrome("abab"), False)
+        self.assertEqual(is_palindrome("abba"), True)
+        self.assertEqual(is_palindrome("cabxbac"), True)
+        self.assertEqual(is_palindrome("cabxbсc"), False)
 
     def test_border(self):
-        self.assertEqual(is_palindrome("a", 1), True)
-        self.assertEqual(is_palindrome("aa", 2), True)
-        self.assertEqual(is_palindrome("ab", 2), False)
+        self.assertEqual(is_palindrome("a"), True)
+        self.assertEqual(is_palindrome("aa"), True)
+        self.assertEqual(is_palindrome("ab"), False)
 
 
 if __name__ == "__main__":
