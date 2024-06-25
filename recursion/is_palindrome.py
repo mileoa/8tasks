@@ -1,5 +1,5 @@
-def is_palindrome(s: str) -> bool:
+def is_palindrome(s: str, n: int) -> bool:
     """Return whether given string is polyndrom."""
-    if len(s) == 0:
+    if n == int(len(s) // 2):
         return True
-    return s[0] == s[-1] and is_palindrome(s[1:-1])
+    return s[len(s) - n] == s[n - 1] and is_palindrome(s, n - 1)
