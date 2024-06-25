@@ -7,4 +7,6 @@ def is_palindrome_recursive(s: str, n: int) -> bool:
     """Return whether given string is palindrom."""
     if n == int(len(s) // 2):
         return True
-    return s[len(s) - n] == s[n - 1] and is_palindrome_recursive(s, n - 1)
+    if s[len(s) - n] != s[n - 1]:
+        return False
+    return is_palindrome_recursive(s, n - 1)
