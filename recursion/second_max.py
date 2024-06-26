@@ -1,8 +1,12 @@
 def second_max(l: list[int]) -> int:
     """Return second max value."""
     if l[0] > l[1]:
-        return second_max_recursive(l, l[0], l[1], 2)
-    return second_max_recursive(l, l[1], l[0], 2)
+        max_1 = l[0]
+        max_2 = l[1]
+    else:
+        max_1 = l[1]
+        max_2 = l[0]
+    return second_max_recursive(l, max_1, max_2, 2)
 
 
 def second_max_recursive(l: list[int], max_1: int, max_2: int, i: int) -> int:
