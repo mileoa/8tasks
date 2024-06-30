@@ -8,7 +8,7 @@ def digital_rain_recursive(
     i: int,
     count_0: int,
     count_1: int,
-    max_len: str,
+    max_len: int,
     max_str: str,
     difference: dict,
 ) -> str:
