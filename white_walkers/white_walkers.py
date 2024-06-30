@@ -12,17 +12,16 @@ def white_walkers_recursive(
     if i == len(village):
         return was_valid_pair
     if ord(village[i]) >= 48 and ord(village[i]) <= 57:
-        if previous + int(village[i]) != 10:
-            previous = int(village[i])
-        elif enemy_count != 3:
-            return False
-        else:
-            previous = int(village[i])
-            enemy_count = 0
+        if previous + int(village[i]) == 10:
+            if enemy_count != 3:
+                return False
             was_valid_pair = True
+        previous = int(village[i])
+        enemy_count = 0
 
-    if village[i] == "=" and previous != -1:
+    elif village[i] == "=":
         enemy_count += 1
+
     return white_walkers_recursive(
         village, i + 1, enemy_count, previous, was_valid_pair
     )
