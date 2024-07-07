@@ -1,5 +1,5 @@
 def matrix(n: int, m: int, matrix: list[list[int]]) -> list[int]:
-    """Return one demencial matrix converted from
+    """Return one dimensional matrix converted from
     two dimensional matrix by spiral crawl.
     """
     return matrix_recursive(n, m, matrix, {"x": 0, "y": 0}, 0, [])
@@ -13,7 +13,7 @@ def matrix_recursive(
     circle_n: int,
     result: list[int],
 ):
-    """Return one demencial matrix converted from
+    """Return one dimensional matrix converted from
     two dimensional matrix by spiral crawl.
     """
     if len(result) == n * m:
